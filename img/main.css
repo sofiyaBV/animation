@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+div{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 1px -1px gray;
+background-color: darkgreen;
+    /* animation */
+    transition-property: background-color, transform;
+    transition-duration: 3000ms;
+    transition-timing-function: linear;
+    transition-duration: 0;
+    transform: translateX(0);
+}
+.box:hover{
+    /* background-color: rgb(209, 37, 37); */
+    transform: rotate(180deg); /*  обертання */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 1px dashed hotpink;
+    border-radius: 4px;
+    padding: 20px;
+    width: 100%;
+    
+}
+.container:hover .box{
+transform: translateX(calc(100vw - 100px));
+}
+.box:nth-child(1){
+    background-color: chartreuse;
+    transition-timing-function: linear;
+
+}
+.box:nth-child(2){
+    background-color: rgb(62, 71, 255);
+    transition-timing-function: ease;
+
+}
+.box:nth-child(3){
+    background-color: rgb(153, 22, 103);
+    transition-timing-function: ease-in;
+
+}
+.box:nth-child(4){
+    background-color: rgb(228, 255, 27);
+    transition-timing-function: ease-in-out;
+
+}
+.box:nth-child(5){
+    background-color: rgb(255, 0, 0);
+    transition-timing-function: ease-out;
+
+}
+.box:nth-child(6){
+    background-color: rgb(78, 217, 252);
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+.library:hover{
+animation-name: chandeBgColor;
+animation-duration: 2000ms;
+}
+@keyframes chandeBgColor{
+    0%{background-color: rgb(0, 255, 255);}
+    50%{background-color: rgb(255, 0, 0);}
+    100%{background-color: darkgreen;}
+}
+.sun{
+    animation-name: spin;
+    animation-direction: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes spin{
+0%{transform: rotate(0deg);}
+100%{transform: rotate(360deg);}
+}
